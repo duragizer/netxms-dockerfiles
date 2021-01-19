@@ -1,9 +1,8 @@
 # Dockerfile for building NetXMS webui
 
-FROM tomcat:8
-MAINTAINER Serhii Moroz <frost.asm@gmail.com>
+FROM tomcat:9
 
-ENV MAJOR=2 MINOR=2 RELEASE=12
+ENV MAJOR=3 MINOR=7 RELEASE=130
 ENV VERSION=${MAJOR}.${MINOR}.${RELEASE} NETXMS_SERVER=127.0.0.1 NETXMS_SESSIONTIMEOUT=120 NETXMS_ENABLEADVANCEDSETTINGS=true
 
 COPY ./docker-entrypoint.sh /
